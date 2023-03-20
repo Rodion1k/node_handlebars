@@ -16,7 +16,7 @@ async function addPhone() {
         PhoneNumber: document.getElementById('phone').value,
     }
     try {
-        const response = await fetch('http://localhost:3000/api/phones', {
+        const response = await fetch('/api/phones', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -26,7 +26,7 @@ async function addPhone() {
 
         if (response.ok) {
             console.log('Form submitted successfully!');
-            window.location.href = 'http://localhost:3000/api/phones';
+            window.location.href = '/api/phones';
         } else {
             console.error('Form submission failed!');
             document.getElementById("err").innerHTML = "add failed"
@@ -44,7 +44,7 @@ async function updatePhone() {
     }
     debugger
     try {
-        const response = await fetch('http://localhost:3000/api/phones', {
+        const response = await fetch('/api/phones', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -54,7 +54,7 @@ async function updatePhone() {
 
         if (response.ok) {
             console.log('Form submitted successfully!');
-            window.location.href = 'http://localhost:3000/api/phones';
+            window.location.href = '/api/phones';
         } else {
             console.error('Form submission failed!');
             document.getElementById("err").innerHTML = "update failed"
@@ -77,7 +77,7 @@ async function deletePhone() {
         if (response.ok) {
             console.log(`Customer with ID ${id} deleted successfully!`);
             // reload the page to update the customer list
-            window.location.href = 'http://localhost:3000/api/phones';
+            window.location.href = '/api/phones';
         } else {
             console.error('Customer deletion failed!');
             document.getElementById("err").innerHTML = "delete failed"
