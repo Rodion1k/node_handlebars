@@ -1,0 +1,9 @@
+{{#if disabled}}
+    <button class="phone-container" disabled>
+        {{> @partial-block}}
+    </button>
+{{else}}
+    <button class="phone-container">
+        {{> @partial-block}}
+    </button>
+{{/if}}

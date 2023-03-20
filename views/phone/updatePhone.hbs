@@ -1,0 +1,10 @@
+<h1>PhoneList Update View</h1>
+<div>
+    {{>phoneList}}
+    {{>addContainer}}
+    <div class="add-container__buttons-container">
+        {{>button buttonLabel='Изменить' clickHandle="updatePhone()"}}
+        {{>button buttonLabel='Удалить' clickHandle="deletePhone()"}}
+        {{>button buttonLabel='Отменить' clickHandle="getView()"}}
+    </div>
+</div>

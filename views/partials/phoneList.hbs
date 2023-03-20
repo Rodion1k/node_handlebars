@@ -1,0 +1,10 @@
+<div class="phone-table">
+    {{#each phones}}
+        <button class="phone-container" onclick="updateView({{this.Id}},`{{this.SurName}}`,`{{this.PhoneNumber}}`);"
+                {{#if ../disabled}}disabled{{/if}}>
+            <div>{{this.Id}}</div>
+            <div>{{this.SurName}}</div>
+            <div>{{this.PhoneNumber}}</div>
+        </button>
+    {{/each}}
+</div>

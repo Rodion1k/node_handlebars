@@ -1,0 +1,13 @@
+<h1>PhoneList Add View</h1>
+<div>
+    {{>phoneList}}
+    <div class="inputs-container">
+        <input id="username" type="text" placeholder="UserName">
+        <input id="phone" type="text" placeholder="PhoneNumber">
+    </div>
+    <div class="add-container__buttons-container">
+        {{>button buttonLabel='Принять' clickHandle="addPhone()"}}
+        {{>button buttonLabel='Отменить' clickHandle="getView()"}}
+        {{#refuse }}{{/refuse}}
+    </div>
+</div>
