@@ -2,8 +2,8 @@
     <div class="inputs-container">
         {{#with values}}
             <input id="phoneId" type="text" value="{{Id}}" disabled>
-            <input id="SurName" type="text" value="{{SurName}}" placeholder="UserName">
-            <input id="PhoneNumber" type="text" value="{{PhoneNumber}}"
+            <input id="SurName" onchange="onChange()" type="text" value="{{SurName}}" placeholder="UserName">
+            <input id="PhoneNumber" onchange="onChange()" type="text" value="{{PhoneNumber}}"
                    placeholder="PhoneNumber">
         {{/with}}
     </div>

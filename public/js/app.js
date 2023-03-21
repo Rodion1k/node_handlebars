@@ -6,6 +6,10 @@ async function getView() {
     window.location.href = '/api/phones';
 }
 
+async function onChange() {
+    document.getElementById('deleteButton').disabled = true;
+}
+
 async function updateView(id, name, number) {
     window.location.href = `/api/phones/updatePhone?Id=${id}&SurName=${name}&PhoneNumber=${number}`;
 }
